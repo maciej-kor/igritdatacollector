@@ -11,16 +11,24 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-public class WebScraperImpl {
+public class WebScraperImpl implements WebScraper{
 
-    private static final String url = "https://igrit.pl/kategoria/gielda-owocow-jablko-deserowe-251?page=";
+    private static final String url = "https://igrit.pl/kategoria/gielda-owocow-jablko-deserowe-251?rodzaj=1&page=";
 
-    public Map<String, String[]> performScraping(String mainPageUrl, int numberOfPages){
+
+    @Override
+    public Map<String, String[]> getDateDescription(int numberOfPagesToScrap) {
+
+        return performScraping(url, numberOfPagesToScrap);
+
+    }
+
+    private Map<String, String[]> performScraping(String mainPageUrl, int numberOfPages){
 
         Set<String> links = new HashSet<>();
         Map<String, String[]> finalMap = new HashMap<>();
 
-        for (int i = 0; i < numberOfPages; i++) {
+        for (int i = 1; i <= numberOfPages; i++) {
             links.addAll(getAllLinksFromSpecificPageNumber(url, i));
         }
 
@@ -31,7 +39,7 @@ public class WebScraperImpl {
         return finalMap;
     }
 
-    protected Set<String> getAllLinksFromSpecificPageNumber(String url, int pageNumber){
+    private Set<String> getAllLinksFromSpecificPageNumber(String url, int pageNumber){
 
         Set<String> linksSet = new HashSet<>();
         String pageUrl = url.concat(Integer.toString(pageNumber));
@@ -55,7 +63,7 @@ public class WebScraperImpl {
         return linksSet;
     }
 
-    protected Map<String, String[]> collectAnnouncementDetails(String linkToTheAnnouncement){
+    private Map<String, String[]> collectAnnouncementDetails(String linkToTheAnnouncement){
 
         Map<String, String[]> urlAndDetailsMap = new HashMap<>();
         String[] dateAndDescription = new String[2];
@@ -84,6 +92,5 @@ public class WebScraperImpl {
         return urlAndDetailsMap;
 
     }
-
 
 }
