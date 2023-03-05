@@ -3,9 +3,8 @@ package com.projects.igritdatacollector;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity @Builder @NoArgsConstructor
+@Entity @AllArgsConstructor @NoArgsConstructor
 public class AnnouncementDetailsModel {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
