@@ -1,10 +1,16 @@
-package com.projects.igritdatacollector;
+package com.projects.igritdatacollector.model;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity @AllArgsConstructor @NoArgsConstructor
+@Entity @NoArgsConstructor @Getter @Setter
 public class AnnouncementDetailsModel {
+
+    public AnnouncementDetailsModel(String url, String date, String description){
+        this.setUrl(url);
+        this.setDate(date);
+        this.setDescription(description);
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,5 +24,7 @@ public class AnnouncementDetailsModel {
 
     @Column
     private String url;
+
+
 
 }
