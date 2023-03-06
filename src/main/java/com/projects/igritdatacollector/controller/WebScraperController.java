@@ -3,7 +3,6 @@ package com.projects.igritdatacollector.controller;
 import com.projects.igritdatacollector.service.AnnouncementDetailsService;
 import com.projects.igritdatacollector.webscraper.WebScraper;
 import com.projects.igritdatacollector.webscraper.WebScraperImpl;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
@@ -27,7 +26,7 @@ public class WebScraperController {
     @Scheduled(fixedRate = 60000)
     private void checkPagesAndPushDataToDB(){
 
-        map.putAll(webScraper.getDateDescription(1));
+        map.putAll(webScraper.getUrlDateDescription(1));
         pushDataToDB();
 
     }
