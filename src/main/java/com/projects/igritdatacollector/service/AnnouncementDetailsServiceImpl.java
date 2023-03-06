@@ -28,27 +28,17 @@ public class AnnouncementDetailsServiceImpl implements AnnouncementDetailsServic
 
         List<AnnouncementDetailsModel> admList = new ArrayList<>();
 
-        for (AnnouncementDetailsModel adm : announcementDetailsRepository.findAll()){
-            admList.add(adm);
-        }
+        admList.addAll(announcementDetailsRepository.findAll());
 
         return admList;
     }
 
     @Override
-    public void updateDB(Set<String[]> announcementDetails) {
+    public void updateDB(String url, String date, String description){
 
-        String url;
-        String date;
-        String description;
-
-        for (String[] s : announcementDetails){
-            url = s[0];
-            date = s[1];
-            description = s[2];
-
-           announcementDetailsRepository.save(new AnnouncementDetailsModel(url, date, description));
-            //System.out.println("URL: " + url + "date: " + date + "description: " + description);
+        if (!announcementDetailsRepository.existsByDescription(description)){
+            announcementDetailsRepository.save(new AnnouncementDetailsModel(url, date, description));
+            System.out.println("saved " + description);
         }
 
     }

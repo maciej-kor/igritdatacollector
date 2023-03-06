@@ -3,9 +3,9 @@ package com.projects.igritdatacollector.controller;
 import com.projects.igritdatacollector.service.AnnouncementDetailsService;
 import com.projects.igritdatacollector.webscraper.WebScraper;
 import com.projects.igritdatacollector.webscraper.WebScraperImpl;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 import java.util.*;
@@ -16,44 +16,29 @@ public class WebScraperController {
     @Autowired
     AnnouncementDetailsService announcementDetailsService;
 
-    private WebScraper webScraper;
+    private final WebScraper webScraper;
     private Map<String, String[]> map;
-    private int mapSize;
 
     public WebScraperController(){
         webScraper = new WebScraperImpl();
         map = new LinkedHashMap<>();
     }
 
-    @Scheduled(fixedRate = 1000)
-    private void checkLinks(){
-        mapSize = map.size();
+    @Scheduled(fixedRate = 60000)
+    private void checkPagesAndPushDataToDB(){
 
         map.putAll(webScraper.getDateDescription(1));
+        pushDataToDB();
 
-        for (String k : map.keySet()){
-            map.get(k);
-            System.out.println(Arrays.toString(map.get(k)));
-        }
-
-        if (mapSize != map.size()){
-            pushData();
-        }
     }
 
-    public void pushData(){
-        Set<String[]> data = new HashSet<>();
-        String[] array = new String[3];
+    private void pushDataToDB(){
 
-        for (String s : map.keySet()){
-            array[0] = s;
-            array[1] = map.get(s)[0];
-            array[2] = map.get(s)[1];
-            data.add(array);
+        for (String key : map.keySet()) {
+            announcementDetailsService.updateDB(key, map.get(key)[0], map.get(key)[1]);
+            System.out.println("URL: " + key + "\n" + "Date: " + map.get(key)[0] + "\n" + "Description: " + map.get(key)[0]);
         }
-        announcementDetailsService.updateDB(data);
     }
-
 
 
 
