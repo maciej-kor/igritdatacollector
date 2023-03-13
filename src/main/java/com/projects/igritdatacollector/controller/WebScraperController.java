@@ -35,7 +35,7 @@ public class WebScraperController {
 
         for (String key : map.keySet()) {
             announcementDetailsService.updateDB(key, map.get(key)[0], map.get(key)[1]);
-            System.out.println("URL: " + key + "\n" + "Date: " + map.get(key)[0] + "\n" + "Description: " + map.get(key)[0]);
+           // System.out.println("URL: " + key + "\n" + "Date: " + map.get(key)[0] + "\n" + "Description: " + map.get(key)[1]);
         }
     }
 

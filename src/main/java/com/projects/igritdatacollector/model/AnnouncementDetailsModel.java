@@ -19,7 +19,7 @@ public class AnnouncementDetailsModel {
     @Column
     private String date;
 
-    @Column
+    @Column(columnDefinition = "text")
     private String description;
 
     @Column

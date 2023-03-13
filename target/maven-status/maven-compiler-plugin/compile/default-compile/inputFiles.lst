@@ -6,5 +6,6 @@
 /Users/maciek/Desktop/project/igritdatacollector/src/main/java/com/projects/igritdatacollector/model/AnnouncementDetailsModel.java
 /Users/maciek/Desktop/project/igritdatacollector/src/main/java/com/projects/igritdatacollector/repository/AnnouncementDetailsRepository.java
 /Users/maciek/Desktop/project/igritdatacollector/src/main/java/com/projects/igritdatacollector/IgritDataCollectorApplication.java
+/Users/maciek/Desktop/project/igritdatacollector/src/main/java/com/projects/igritdatacollector/controller/MainController.java
 /Users/maciek/Desktop/project/igritdatacollector/src/main/java/com/projects/igritdatacollector/exception/ResourceNotFoundException.java
 /Users/maciek/Desktop/project/igritdatacollector/src/main/java/com/projects/igritdatacollector/controller/WebScraperController.java

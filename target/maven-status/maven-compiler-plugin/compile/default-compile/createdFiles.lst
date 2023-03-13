@@ -8,3 +8,4 @@ com/projects/igritdatacollector/service/AnnouncementDetailsServiceImpl.class
 com/projects/igritdatacollector/DTOAnnouncementDetails.class
 com/projects/igritdatacollector/exception/ResourceNotFoundException.class
 com/projects/igritdatacollector/repository/AnnouncementDetailsRepository.class
+com/projects/igritdatacollector/controller/MainController.class
