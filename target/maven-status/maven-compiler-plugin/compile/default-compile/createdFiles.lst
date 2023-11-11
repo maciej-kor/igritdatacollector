@@ -1,0 +1,12 @@
+com/projects/igritdatacollector/webscraper/WebScraper.class
+com/projects/igritdatacollector/model/AnnouncementDetailsModel.class
+com/projects/igritdatacollector/webscraper/WebScraperImpl.class
+com/projects/igritdatacollector/controller/WebScraperController.class
+com/projects/igritdatacollector/DTOAnnouncementDetails.class
+com/projects/igritdatacollector/controller/MainController.class
+com/projects/igritdatacollector/DBConfig.class
+com/projects/igritdatacollector/IgritDataCollectorApplication.class
+com/projects/igritdatacollector/service/AnnouncementDetailsService.class
+com/projects/igritdatacollector/service/AnnouncementDetailsServiceImpl.class
+com/projects/igritdatacollector/exception/ResourceNotFoundException.class
+com/projects/igritdatacollector/repository/AnnouncementDetailsRepository.class

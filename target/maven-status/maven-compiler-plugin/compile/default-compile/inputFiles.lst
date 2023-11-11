@@ -1,0 +1,11 @@
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/webscraper/WebScraper.java
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/IgritDataCollectorApplication.java
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/exception/ResourceNotFoundException.java
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/controller/WebScraperController.java
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/webscraper/WebScraperImpl.java
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/model/AnnouncementDetailsModel.java
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/service/AnnouncementDetailsServiceImpl.java
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/service/AnnouncementDetailsService.java
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/repository/AnnouncementDetailsRepository.java
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/DTOAnnouncementDetails.java
+/Users/maciek/Desktop/Project/igritdatacollector/src/main/java/com/projects/igritdatacollector/controller/MainController.java
