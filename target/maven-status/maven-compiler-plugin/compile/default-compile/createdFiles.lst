@@ -4,7 +4,6 @@ com/projects/igritdatacollector/webscraper/WebScraperImpl.class
 com/projects/igritdatacollector/controller/WebScraperController.class
 com/projects/igritdatacollector/DTOAnnouncementDetails.class
 com/projects/igritdatacollector/controller/MainController.class
-com/projects/igritdatacollector/DBConfig.class
 com/projects/igritdatacollector/IgritDataCollectorApplication.class
 com/projects/igritdatacollector/service/AnnouncementDetailsService.class
 com/projects/igritdatacollector/service/AnnouncementDetailsServiceImpl.class

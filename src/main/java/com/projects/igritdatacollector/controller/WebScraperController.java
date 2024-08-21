@@ -26,7 +26,7 @@ public class WebScraperController {
     @Scheduled(fixedRate = 60000)
     private void checkPagesAndPushDataToDB(){
 
-        map.putAll(webScraper.getUrlDateDescription(1));
+        map.putAll(webScraper.getUrlDateDescription(3));
         pushDataToDB();
 
     }
